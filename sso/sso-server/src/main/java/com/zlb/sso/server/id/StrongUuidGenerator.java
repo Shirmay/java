@@ -15,6 +15,7 @@ public class StrongUuidGenerator implements IdGenerator{
         ensureGeneratorInitialized();
     }
 
+
     protected void ensureGeneratorInitialized() {
         if (timeBasedGenerator == null) {
             synchronized (StrongUuidGenerator.class) {
