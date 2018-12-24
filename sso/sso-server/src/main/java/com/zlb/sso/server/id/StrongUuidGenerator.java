@@ -3,7 +3,6 @@ package com.zlb.sso.server.id;
 import com.fasterxml.uuid.EthernetAddress;
 import com.fasterxml.uuid.Generators;
 import com.fasterxml.uuid.impl.TimeBasedGenerator;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -14,7 +13,6 @@ public class StrongUuidGenerator implements IdGenerator{
     public StrongUuidGenerator() {
         ensureGeneratorInitialized();
     }
-
 
     protected void ensureGeneratorInitialized() {
         if (timeBasedGenerator == null) {
