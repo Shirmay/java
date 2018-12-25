@@ -1,4 +1,20 @@
 package com.zlb.sso.client.authentication;
 
-public class SimplePrincipal {
+import java.io.Serializable;
+import java.security.Principal;
+
+public class SimplePrincipal implements Principal, Serializable{
+
+    private static final long serialVersionUID = -5645357206342793145L;
+
+    private String name;
+
+    @Override
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }

@@ -10,9 +10,11 @@ public class CookieUtils {
 
     public static String getCookie(HttpServletRequest request, String key){
         Cookie[] cookies = request.getCookies();
-        for(Cookie cookie : cookies){
-            if (Objects.equals(cookie.getName(), key)){
-                return cookie.getName();
+        if (cookies != null){
+            for(Cookie cookie : cookies){
+                if (Objects.equals(cookie.getName(), key)){
+                    return cookie.getName();
+                }
             }
         }
         return null;
@@ -35,5 +37,4 @@ public class CookieUtils {
         cookie.setMaxAge(-1000);
         response.addCookie(cookie);
     }
-
 }

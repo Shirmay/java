@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 @Controller
 @RequestMapping("/success")
-public class CasSuccess {
+public class CasSuccessServlet {
 
     public ModelAndView success(HttpServletRequest request, HttpServletResponse response){
         ModelAndView model = new ModelAndView("cas");

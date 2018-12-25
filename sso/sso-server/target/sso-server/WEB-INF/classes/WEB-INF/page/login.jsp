@@ -28,5 +28,6 @@
     <label>密&nbsp;&nbsp;&nbsp;&nbsp;码：</label><input type="password" id="password" name="password" style="width: 200px;height: 30px"/><br><br>
     <input type="button" value="登录" style="height: 30px; width: 100px;" onclick="login()">
 </form>
+<span style="color: red">${message}</span>
 </body>
 </html>

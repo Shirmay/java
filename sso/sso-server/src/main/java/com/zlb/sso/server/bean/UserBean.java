@@ -1,24 +1,14 @@
 package com.zlb.sso.server.bean;
 
-public class UserBean implements java.io.Serializable{
+import com.zlb.sso.server.authentication.UserPrincipal;
+
+public class UserBean extends UserPrincipal implements java.io.Serializable{
 
     private Long id;
-
-    private String loginName;
-
-    private String username;
 
     private String password;
 
     private String salt;
-
-    public String getLoginName() {
-        return loginName;
-    }
-
-    public void setLoginName(String loginName) {
-        this.loginName = loginName;
-    }
 
     public Long getId() {
         return id;
@@ -26,14 +16,6 @@ public class UserBean implements java.io.Serializable{
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
     }
 
     public String getPassword() {
@@ -50,5 +32,10 @@ public class UserBean implements java.io.Serializable{
 
     public void setSalt(String salt) {
         this.salt = salt;
+    }
+
+    @Override
+    public String toString() {
+        return super.getName();
     }
 }

@@ -19,7 +19,7 @@ public class LoginDao {
     private JdbcTemplate jdbcTemplate = SpringContextHolder.getBean(JdbcTemplate.class);
 
     public UserBean getUserByLoginName(String loginName){
-        final String sql = "select id, login_name, password, salt from sys_user t where t.login_name = ?";
+        final String sql = "select login_id, login_name, psw, user_name from sys_user t where t.login_name = ?";
         return jdbcTemplate.execute(new PreparedStatementCreator(){
             @Override
             public PreparedStatement createPreparedStatement(Connection con) throws SQLException {
@@ -34,10 +34,9 @@ public class LoginDao {
                 UserBean user = null;
                 if (rs.next()){
                     user = new UserBean();
-                    user.setId(rs.getLong("id"));
-                    user.setPassword(rs.getString("password"));
-                    user.setUsername(rs.getString("user_name"));
-                    user.setLoginName(rs.getString("login_name"));
+                    user.setId(rs.getLong("login_id"));
+                    user.setPassword(rs.getString("psw"));
+                    user.setName(rs.getString("login_name"));
                 }
                 return user;
             }

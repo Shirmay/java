@@ -12,7 +12,6 @@
     <!-- 使用Annotation自动注册Bean -->
     <context:component-scan base-package="com.zlb.sso.server"/>
 
-
     <bean id="springContextHolder" class="com.zlb.sso.server.spring.SpringContextHolder"/>
 
 </beans>
