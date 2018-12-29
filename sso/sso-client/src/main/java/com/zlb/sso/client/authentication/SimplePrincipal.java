@@ -9,6 +9,14 @@ public class SimplePrincipal implements Principal, Serializable{
 
     private String name;
 
+    public SimplePrincipal(){
+
+    }
+
+    public SimplePrincipal(String name){
+        this.name = name;
+    }
+
     @Override
     public String getName() {
         return name;

@@ -8,12 +8,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="sso-client" />
         <module name="sso-server" />
+        <module name="sso-web" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
       <module name="sso" target="1.8" />
       <module name="sso-client" target="1.8" />
       <module name="sso-server" target="1.8" />
+      <module name="sso-web" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

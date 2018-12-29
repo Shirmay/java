@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/sso.iml" filepath="$PROJECT_DIR$/sso.iml" />
       <module fileurl="file://$PROJECT_DIR$/sso-client/sso-client.iml" filepath="$PROJECT_DIR$/sso-client/sso-client.iml" />
       <module fileurl="file://$PROJECT_DIR$/sso-server/sso-server.iml" filepath="$PROJECT_DIR$/sso-server/sso-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sso-web/sso-web.iml" filepath="$PROJECT_DIR$/sso-web/sso-web.iml" />
     </modules>
   </component>
 </project>

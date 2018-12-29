@@ -10,6 +10,7 @@
   <modules>
     <module>sso-server</module>
     <module>sso-client</module>
+    <module>sso-web</module>
   </modules>
   <packaging>pom</packaging>
 
@@ -27,6 +28,7 @@
     <commons-lang3.version>3.3.2</commons-lang3.version>
     <commons-beanutils.version>1.8.3</commons-beanutils.version>
     <commons-io.version>2.6</commons-io.version>
+    <json.version>20180130</json.version>
   </properties>
 
   <dependencies>
@@ -36,33 +38,35 @@
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
-
-      <!-- slf4j -->
-      <dependency>
-          <groupId>org.slf4j</groupId>
-          <artifactId>slf4j-log4j12</artifactId>
-          <version>${slf4j.version}</version>
-          <scope>compile</scope>
-      </dependency>
-      <dependency>
-          <groupId>log4j</groupId>
-          <artifactId>log4j</artifactId>
-          <version>${log4j.version}</version>
-          <scope>compile</scope>
-      </dependency>
-      <!-- slf4j end -->
-
-    <!-- tomcat -->
     <dependency>
-      <groupId>org.apache.tomcat</groupId>
-      <artifactId>tomcat-servlet-api</artifactId>
-      <version>8.0.28</version>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>4.0.1</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <!-- slf4j -->
+    <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-log4j12</artifactId>
+        <version>${slf4j.version}</version>
+        <scope>compile</scope>
     </dependency>
     <dependency>
-      <groupId>org.apache.tomcat</groupId>
-      <artifactId>tomcat-jasper</artifactId>
-      <version>8.0.28</version>
+        <groupId>log4j</groupId>
+        <artifactId>log4j</artifactId>
+        <version>${log4j.version}</version>
+        <scope>compile</scope>
     </dependency>
+    <!-- slf4j end -->
+
+    <!-- json -->
+    <dependency>
+      <groupId>org.json</groupId>
+      <artifactId>json</artifactId>
+      <version>${json.version}</version>
+    </dependency>
+
     <dependency>
       <groupId>com.fasterxml.uuid</groupId>
       <artifactId>java-uuid-generator</artifactId>

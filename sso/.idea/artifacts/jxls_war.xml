@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="jxls:war">
-    <output-path>$PROJECT_DIR$/jxls/target</output-path>
-    <root id="archive" name="jxls.war">
-      <element id="artifact" artifact-name="jxls:war exploded" />
-    </root>
-  </artifact>
-</component>
